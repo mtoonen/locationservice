@@ -86,7 +86,6 @@ public class AddActionBean implements ActionBean {
         try {
             conn = getConnection();
 
-    // No DataSource so we must handle Connections manually
             QueryRunner run = new QueryRunner();
             run.update(conn,"INSERT INTO location (key,x,y) VALUES (?,?,?)",key,x,y);
             int a = 0;
@@ -94,7 +93,6 @@ public class AddActionBean implements ActionBean {
             Logger.getLogger(AddActionBean.class.getName()).log(Level.SEVERE, null, ex);
         }finally{
             DbUtils.closeQuietly(conn);
-            
         }
     }
 
