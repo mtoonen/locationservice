@@ -13,6 +13,7 @@ import java.util.Date;
 public class Location {
     
     private Integer id;
+    private String key;
     private String group;
     private Integer x;
     private Integer y;
@@ -57,5 +58,5 @@ public class Location {
     public void setTime(Date time) {
         this.time = time;
     }
-    
+ 
 }
