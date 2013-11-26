@@ -33,6 +33,7 @@ public class AddActionBean implements ActionBean{
     @Validate
     private Integer y;
     
+    // <editor-fold desc="Getters and Setters" defaultstate="collapsed" >
     @Override
     public void setContext(ActionBeanContext abc) {
         this.context = abc;
@@ -66,7 +67,7 @@ public class AddActionBean implements ActionBean{
     public void setY(Integer y) {
         this.y = y;
     }
-    
+    // </editor-fold>
     
     
     @DefaultHandler
@@ -74,4 +75,7 @@ public class AddActionBean implements ActionBean{
         return new ForwardResolution(JSP);
     }
     
+    private void save(){
+        
+    }
 }
